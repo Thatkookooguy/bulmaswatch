@@ -1,0 +1,199 @@
+// Overrides
+body, button, input, select, textarea {
+  font-family: $comfortaa;
+}
+
+.control.has-icons-left .icon,
+.control.has-icons-right .icon {
+  top: -0.1em;
+}
+
+.tabs .icon:first-child,
+.button .icon:first-child:not(:last-child) {
+  margin-bottom: 0.1em;
+}
+
+.control.has-icons-left .input, .control.has-icons-left .select select {
+  padding-left: calc($input-height + 2px);
+}
+
+.control.has-icons-left .icon.is-left,
+.textarea {
+  transition: all 250ms !important;
+}
+
+.control.has-icons-left input:focus + .icon.is-left {
+  left: 2px;
+}
+
+.input, .select select, .file-cta, .file-name, .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+  border-top-width: 0;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 2px;
+  transition: all 250ms;
+}
+
+.input:not(.is-rounded):focus,
+.input:not(.is-rounded).is-focused,
+.input:not(.is-rounded):active,
+.input:not(.is-rounded).is-active,
+.textarea:focus,
+.textarea.is-focused,
+.textarea:active,
+.textarea.is-active,
+.input.is-primary:focus,
+.input.is-primary.is-focused,
+.input.is-primary:active,
+.input.is-primary.is-active,
+.textarea.is-primary:focus,
+.textarea.is-primary.is-focused,
+.textarea.is-primary:active,
+.textarea.is-primary.is-active,
+.input.is-info:focus,
+.input.is-info.is-focused,
+.input.is-info:active,
+.input.is-info.is-active,
+.textarea.is-info:focus,
+.textarea.is-info.is-focused,
+.textarea.is-info:active,
+.textarea.is-info.is-active,
+.input.is-success:focus,
+.input.is-success.is-focused,
+.input.is-success:active,
+.input.is-success.is-active,
+.textarea.is-success:focus,
+.textarea.is-success.is-focused,
+.textarea.is-success:active,
+.textarea.is-success.is-active,
+.input.is-warning:focus,
+.input.is-warning.is-focused,
+.input.is-warning:active,
+.input.is-warning.is-active,
+.textarea.is-warning:focus,
+.textarea.is-warning.is-focused,
+.textarea.is-warning:active,
+.textarea.is-warning.is-active,
+.input.is-danger:focus,
+.input.is-danger.is-focused,
+.input.is-danger:active,
+.input.is-danger.is-active,
+.textarea.is-danger:focus,
+.textarea.is-danger.is-focused,
+.textarea.is-danger:active,
+.textarea.is-danger.is-active,
+.select select:focus,
+.select select.is-focused,
+.select select:active,
+.select select.is-active {
+  box-shadow: none;
+  border-left-width: 4px;
+  border-bottom-left-radius: 3px;
+}
+
+.input,
+.select select {
+  border-radius: 0;
+}
+
+.input.is-rounded {
+  background-color: $grey-dark;
+  border-bottom-width: 0;
+  transition: all 250ms;
+  box-shadow: 0 0.1em 0.1em 0.01em transparent;
+
+  &:focus {
+    box-shadow: 0 0.1em 0.05em 0.01em currentColor;
+  }
+}
+
+.hero {
+  background-color: $black-ter;
+}
+
+.delete {
+  background-color: rgba(255, 255, 255, 0.2);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.label {
+  color: $grey-lighter;
+}
+
+.notification {
+  @each $name, $pair in $colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 2);
+
+    &.is-#{$name} {
+      a:not(.button) {
+        color: $color-invert;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.card {
+  $card-border-color: lighten($grey-darker, 5);
+  box-shadow: none;
+  background-color: $grey-darker;
+
+  .card-header {
+    box-shadow: none;
+    background-color: rgba($black-bis, 0.2);
+  }
+
+  .card-footer {
+    background-color: rgba($black-bis, 0.2);
+  }
+
+  .card-footer,
+  .card-footer-item {
+    border-color: $card-border-color;
+  }
+}
+
+.message-header {
+  background-color: $black-ter;
+  color: $white;
+}
+
+.message-body {
+  border-color: $black-ter;
+}
+
+.modal-card-body {
+  background-color: $black-ter;
+}
+
+.modal-card-foot,
+.modal-card-head {
+  border-color: $black-ter;
+}
+
+.navbar {
+  border: 1px solid $grey-darker;
+  .navbar-dropdown {
+    border: 1px solid $grey-darker;
+  }
+
+  @include touch {
+    .navbar-menu {
+      background-color: $navbar-background-color;
+    }
+  }
+}
+
+.hero {
+  .navbar {
+    &,
+    .navbar-menu,
+    .navbar-dropdown {
+      border: none;
+    }
+  }
+}
